@@ -1,0 +1,18 @@
+server:
+  port: 9011
+
+spring:
+  application:
+    name: confs
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/luoyanqiang/spring-cloud-config.git
+          username: luoyanqiang
+          password: luohanqun1992
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:9000/eureka
+

@@ -1,0 +1,32 @@
+
+
+
+
+server:
+  port: 9112
+
+eureka:
+  client:
+    service-url:
+     defaultZone: http://localhost:9000/eureka
+
+
+
+
+
+
+spring:
+  application:
+    name: config-test
+  cloud:
+    config:
+#      uri: http://localhost:9011/
+      profile: dev
+      label: master
+      discovery:
+        enabled: true
+        service-id: confs
+
+
+
+

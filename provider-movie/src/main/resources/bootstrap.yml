@@ -1,0 +1,39 @@
+server:
+  port: 9002
+
+debug: true
+
+eureka:
+  client:
+    service-url:
+     defaultZone: http://localhost:9000/eureka
+
+ribbon:
+  eager-load:
+    clients: provider-user
+    enabled: true
+feign:
+  hystrix:
+    enabled: true
+
+
+spring:
+#  application:
+#    name: provider-movie
+  application:
+      name: microservice-foo
+  cloud:
+    config:
+        profile: dev
+#        label: master
+#        uri: http://localhost:9011/
+        discovery:
+          enabled: true
+          service-id: confs
+
+
+
+
+
+
+
