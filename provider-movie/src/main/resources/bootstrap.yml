@@ -21,7 +21,7 @@ spring:
 #  application:
 #    name: provider-movie
   application:
-      name: microservice-foo
+      name: provider-movie
   cloud:
     config:
         profile: dev
