@@ -1,0 +1,10 @@
+.classpath
+.project
+MANIFEST.MF
+org.eclipse.*
+org.springframework.*
+*.iml
+target/
+.idea/
+catalina.base_IS_UNDEFINED/
+spy.log
