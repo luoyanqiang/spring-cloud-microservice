@@ -7,13 +7,13 @@
 		<artifactId>cloudDemo</artifactId>
 		<version>1.0.0</version>
 	</parent>
-	<artifactId>zuul</artifactId>
+	<artifactId>zipkin</artifactId>
 	<name>zipkin</name>
 	<description>Demo project for Spring Boot</description>
 
 	<properties>
 		<java.version>1.8</java.version>
-		<spring-cloud.version>Greenwich.SR1</spring-cloud.version>
+		<spring-cloud.version>Finchley.M8</spring-cloud.version>
 	</properties>
 
 	<dependencies>
