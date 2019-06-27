@@ -18,10 +18,35 @@ feign:
 
 
 spring:
-#  application:
-#    name: provider-movie
   application:
       name: provider-movie
+  datasource:
+    name: test
+    url: jdbc:mysql://192.168.33.12:3306/finance?useUnicode=true&characterEncoding=utf8&serverTimezone=Asia/Shanghai&zeroDateTimeBehavior=convertToNull
+    username: root
+    password: root
+    # 使用druid数据源
+    type: com.alibaba.druid.pool.DruidDataSource
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    druid:
+      filters: stat
+      maxActive: 10
+      initialSize: 1
+      maxWait: 60000
+      minIdle: 1
+      timeBetweenEvictionRunsMillis: 60000
+      minEvictableIdleTimeMillis: 300000
+      validationQuery: select 'x'
+      testWhileIdle: true
+      testOnBorrow: false
+      testOnReturn: false
+      poolPreparedStatements: true
+      maxOpenPreparedStatements: 20
+    servlet:
+      multipart:
+        max-file-size: 100MB
+        max-request-size: 1000MB
+        resolve-lazily: true
   cloud:
     config:
         profile: dev

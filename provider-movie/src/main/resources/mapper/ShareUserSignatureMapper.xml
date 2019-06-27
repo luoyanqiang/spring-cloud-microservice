@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.fish.providermovie.mapper.FinanceUserMapper">
+    <resultMap id="BaseResultMap" type="com.fish.providermovie.entity.FinanceUserEntity">
+        <id column="uid" jdbcType="INTEGER" property="uid"/>
+        <result column="name" jdbcType="VARCHAR" property="name"/>
+        <result column="tel" jdbcType="VARCHAR" property="tel"/>
+        <result column="money" jdbcType="INTEGER" property="money"/>
+    </resultMap>
+</mapper>

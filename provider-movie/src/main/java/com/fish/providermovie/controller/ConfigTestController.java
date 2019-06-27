@@ -13,8 +13,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/config")
 public class ConfigTestController {
 
-    @Value("${profile}")
-    private String profile;
+    private String profile = "ss";
 
     @GetMapping("profile")
     public String hello() {
