@@ -3,6 +3,7 @@ package com.fish.providermovie.service.impl;
 import com.fish.providermovie.ProviderMovieApplication;
 import com.fish.providermovie.entity.FinanceUserEntity;
 import com.fish.providermovie.service.UserService;
+import com.fish.providermovie.utils.RedisUtils;
 import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -25,6 +26,8 @@ public class UserServiceImplTest {
 
     @Autowired
     private UserService userService;
+    @Autowired
+    private RedisUtils redisUtils;
 
     @Test
     public void findList() {
@@ -32,4 +35,14 @@ public class UserServiceImplTest {
         list.stream().forEach(item -> System.out.println(item.getName()));
         Assert.assertTrue(list.size() > 0);
     }
+
+
+
+    @Test
+    public void testRedis() {
+        redisUtils.set("name", "lisi");
+        String name = (String) redisUtils.get("name");
+        Assert.assertEquals(name, "lisi");
+    }
+
 }
