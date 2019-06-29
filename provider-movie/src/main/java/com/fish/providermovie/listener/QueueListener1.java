@@ -14,6 +14,7 @@ public class QueueListener1 {
     @RabbitHandler
     public void displayMail(Mail mail, Channel channel, Message message) throws Exception {
         System.out.println("队列监听器1号收到消息" + mail.toString());
-        //channel.basicAck(message.getMessageProperties().getDeliveryTag(), false);//如果需要确认的要调用
+        //如果需要确认的要调用
+        // channel.basicAck(message.getMessageProperties().getDeliveryTag(), false);
     }
 }
