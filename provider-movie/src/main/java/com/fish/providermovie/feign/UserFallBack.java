@@ -13,7 +13,7 @@ import java.util.Map;
 public class UserFallBack implements UserFeignClient {
     @Override
     public Map findById(Integer id) {
-        Map map = new HashMap();
+        Map map = new HashMap(3);
         map.put("id", 0);
         map.put("name", "default");
         map.put("age", 8);
