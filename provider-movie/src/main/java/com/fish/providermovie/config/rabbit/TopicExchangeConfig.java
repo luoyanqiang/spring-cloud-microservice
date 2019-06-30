@@ -1,4 +1,4 @@
-package com.fish.providermovie.config;
+package com.fish.providermovie.config.rabbit;
 
 import org.springframework.amqp.core.Binding;
 import org.springframework.amqp.core.BindingBuilder;

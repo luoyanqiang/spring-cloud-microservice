@@ -1,4 +1,4 @@
-package com.fish.providermovie.config;
+package com.fish.providermovie.config.rabbit;
 
 import org.springframework.amqp.core.Queue;
 import org.springframework.context.annotation.Bean;

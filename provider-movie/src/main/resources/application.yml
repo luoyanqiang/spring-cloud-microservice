@@ -57,7 +57,5 @@ spring:
         max-concurrency: 100
         acknowledge-mode: MANUAL
         default-requeue-rejected: true  # 被拒绝的消息是否放回队列
-    template:
-      retry:
-        enabled: true
-
+        retry:
+          enabled: true
